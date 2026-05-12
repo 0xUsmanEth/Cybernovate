@@ -251,7 +251,7 @@ p { margin: 0 0 1em; }
   gap: 24px;
 }
 .header__brand { display: flex; align-items: center; flex: 0 0 auto; }
-.header__logo { height: 42px; width: auto; object-fit: contain; }
+.header__logo { height: 48px; width: auto; object-fit: contain; }
 
 .nav__list {
   list-style: none;
