@@ -202,7 +202,7 @@ p { margin: 0 0 1em; }
   gap: 24px;
 }
 .header__brand { display: flex; align-items: center; flex: 0 0 auto; }
-.header__logo { height: 64px; width: auto; object-fit: contain; }
+.header__logo { height: 90px; width: auto; object-fit: contain; }
 .header__email {
   display: inline-flex;
   align-items: center;
