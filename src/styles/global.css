@@ -125,6 +125,7 @@ p { margin: 0 0 1em; }
 }
 .section-head { margin-bottom: 48px; }
 .section-head--center { text-align: center; margin-inline: auto; }
+.section-head--center .section-title { margin-inline: auto; }
 .section-head--center .section-lede { margin-inline: auto; }
 .section-head--center .eyebrow { justify-content: center; }
 
