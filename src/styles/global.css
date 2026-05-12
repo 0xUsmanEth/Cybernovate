@@ -225,6 +225,7 @@ p { margin: 0 0 1em; }
 }
 .nav__link {
   position: relative;
+  white-space: nowrap;
   display: inline-flex;
   align-items: center;
   gap: 4px;
