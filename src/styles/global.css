@@ -1105,7 +1105,7 @@ p { margin: 0 0 1em; }
 }
 .footer__brand p { font-size: 14.5px; color: rgba(255,255,255,.62); }
 .footer__logo {
-  height: 120px; width: auto;
+  height: 80px; width: auto;
   margin-bottom: 18px;
   display: inline-block;
 }
