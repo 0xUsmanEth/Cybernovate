@@ -82,23 +82,34 @@ p { margin: 0 0 1em; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  padding: 6px 14px 6px 10px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 999px;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 12px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--blue-500);
-  margin-bottom: 14px;
+  color: var(--navy-800);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
 }
 .eyebrow::before {
   content: '';
-  width: 24px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--blue-500), var(--blue-400));
-  border-radius: 2px;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, var(--blue-500), var(--blue-400));
+  border-radius: 50%;
+  flex-shrink: 0;
 }
-.eyebrow--light { color: var(--blue-300); }
-.eyebrow--light::before { background: linear-gradient(90deg, var(--blue-300), white); }
+.eyebrow--light {
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.22);
+  color: white;
+  box-shadow: none;
+}
+.eyebrow--light::before { background: linear-gradient(135deg, var(--blue-300), var(--blue-400)); }
 
 /* Section heads */
 .section-title {
@@ -822,8 +833,6 @@ p { margin: 0 0 1em; }
   pointer-events: none;
 }
 .page-hero__inner { position: relative; }
-.page-hero .eyebrow { color: var(--blue-500); }
-.page-hero .eyebrow::before { background: linear-gradient(90deg, var(--blue-500), var(--blue-400)); }
 .page-hero__title {
   font-size: clamp(32px, 5vw, 58px);
   font-weight: 700;
