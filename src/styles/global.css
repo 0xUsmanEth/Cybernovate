@@ -838,7 +838,7 @@ p { margin: 0 0 1em; }
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.025em;
-  background: linear-gradient(120deg, var(--blue-500) 10%, var(--navy-700) 80%);
+  background: linear-gradient(90deg, var(--ink-900) 0%, var(--ink-900) 55%, var(--blue-500) 75%, var(--navy-800) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
