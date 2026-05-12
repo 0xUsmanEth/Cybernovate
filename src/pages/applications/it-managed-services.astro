@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import BreadcrumbNav from '../../components/BreadcrumbNav.astro';
+import DetailCard from '../../components/DetailCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+<BaseLayout
+  title="IT Managed Services | CyberNovate"
+  description="Stable, secure IT operations through ongoing support, infrastructure monitoring, and incident response management."
+>
+
+  <PageHero eyebrow="Application Services" title="IT Managed Services">
+    <BreadcrumbNav slot="breadcrumb" crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Applications', href: '/applications' },
+      { label: 'IT Managed Services' },
+    ]} />
+    <Fragment slot="subtitle">
+      <p>Reliable IT operations are essential for business continuity and performance. Our IT managed services help organizations maintain stable, secure, and efficient technology environments through ongoing support, monitoring, and operational management.</p>
+      <p>We act as an extension of your team, helping reduce operational burden while improving service quality and responsiveness.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="sub-services" aria-labelledby="msTitle">
+    <div class="container">
+      <header class="section-head">
+        <span class="eyebrow">What We Deliver</span>
+        <h2 id="msTitle" class="section-title">Managed Services Capabilities</h2>
+      </header>
+      <div class="sub-services__grid">
+
+        <DetailCard
+          title="Ongoing IT Support and Operational Management"
+          description="We provide day-to-day IT support and operational management to keep systems running reliably, users productive, and technology aligned with business needs."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2 2 7l10 5 10-5-10-5Zm0 11L2 8v9l10 5 10-5V8l-10 5Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Infrastructure and System Monitoring"
+          description="We monitor your infrastructure, systems, and services to detect issues early, maintain performance, and ensure continuous availability."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M21 11h-2.05A7 7 0 0 0 13 5.05V3h-2v2.05A7 7 0 0 0 5.05 11H3v2h2.05A7 7 0 0 0 11 18.95V21h2v-2.05A7 7 0 0 0 18.95 13H21v-2Zm-9 6a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Incident and Issue Response Support"
+          description="We provide structured incident response and issue resolution support to minimize downtime, restore operations quickly, and prevent recurrence."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2 1 21h22L12 2Zm0 4 7.5 13H4.5L12 6Zm-1 5v4h2v-4h-2Zm0 5v2h2v-2h-2Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Service Optimization and Maintenance"
+          description="We continuously review and optimize your IT services and infrastructure to improve efficiency, performance, and cost-effectiveness over time."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 17h6v-7H3v7Zm7 0h4V3h-4v14Zm5 0h6V8h-6v9Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Managed Support Aligned to Business Requirements"
+          description="We tailor our managed services to your specific environment, scale, and operational priorities — providing flexible support that grows with your business."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5Z"/></svg>
+        </DetailCard>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="value-strip" aria-label="Value proposition">
+    <div class="container value-strip__inner">
+      {[
+        'Improve reliability and service continuity',
+        'Reduce internal operational workload',
+        'Access consistent support and technical expertise',
+      ].map(item => (
+        <div class="value-strip__item">
+          <span class="value-strip__check">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path fill="white" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17Z"/></svg>
+          </span>
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>

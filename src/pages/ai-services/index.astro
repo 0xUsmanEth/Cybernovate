@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+<BaseLayout
+  title="AI Services | CyberNovate"
+  description="Adopt AI securely and govern it responsibly with CyberNovate's AI cybersecurity frameworks and secure adoption strategies."
+>
+
+  <PageHero eyebrow="Artificial Intelligence" title="Artificial Intelligence Services">
+    <Fragment slot="subtitle">
+      <p>Artificial intelligence can significantly improve security, insight, and decision-making when implemented with the right strategy and controls. Our AI services are designed to help organizations adopt AI in a secure, governed, and business-aligned way, with a strong focus on cybersecurity risk and control frameworks.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="services" aria-labelledby="aiServicesTitle">
+    <div class="container">
+      <h2 id="aiServicesTitle" class="section-title" style="margin-bottom: 36px;">Our AI Services</h2>
+      <div class="services__grid">
+
+        <ServiceCard
+          num="01"
+          title="Cybersecurity for AI Solutions"
+          description="Protect AI solutions against misuse, compromise, data exposure, and emerging threats by embedding cybersecurity controls, governance, and risk management practices across the AI lifecycle."
+          bullets={['Cybersecurity assessments for AI platforms','Security controls for AI data & models','AI-specific threat identification','Secure AI development guidance']}
+          ctaText="Explore Cybersecurity for AI"
+          href="/ai-services/cybersecurity-for-ai"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Zm-1 14-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 7Z"/></svg>
+        </ServiceCard>
+
+        <ServiceCard
+          num="02"
+          title="AI Cybersecurity Framework"
+          description="Establish AI governance, controls, risk management, and security practices for safe and responsible AI adoption and operation."
+          bullets={['AI governance & security framework design','Risk & control models for AI systems','Policies for secure AI adoption','AI compliance & assurance support']}
+          ctaText="Explore AI Framework"
+          href="/ai-services/ai-cybersecurity-framework"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M3 3h8v8H3V3Zm10 0h8v8h-8V3ZM3 13h8v8H3v-8Zm10 4 4-4 4 4-4 4-4-4Z"/></svg>
+        </ServiceCard>
+
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>

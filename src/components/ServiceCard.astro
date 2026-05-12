@@ -1,0 +1,25 @@
+---
+interface Props {
+  num: string;
+  title: string;
+  description: string;
+  bullets: string[];
+  ctaText: string;
+  href: string;
+}
+const { num, title, description, bullets, ctaText, href } = Astro.props;
+---
+<a href={href} class="service-card reveal">
+  <div class="service-card__head">
+    <div class="service-card__num">{num}</div>
+    <div class="service-card__icon">
+      <slot name="icon" />
+    </div>
+  </div>
+  <h3 class="service-card__title">{title}</h3>
+  <p class="service-card__copy">{description}</p>
+  <ul class="service-card__list">
+    {bullets.map(b => <li>{b}</li>)}
+  </ul>
+  <span class="service-card__cta">{ctaText} <span aria-hidden="true">→</span></span>
+</a>

@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import BreadcrumbNav from '../../components/BreadcrumbNav.astro';
+import DetailCard from '../../components/DetailCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+<BaseLayout
+  title="AI for Business Applications | CyberNovate"
+  description="Integrate practical AI into your business workflows with use case identification, intelligent automation, and AI-enabled analytics."
+>
+
+  <PageHero eyebrow="Application Services" title="Artificial Intelligence for Business Applications">
+    <BreadcrumbNav slot="breadcrumb" crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Applications', href: '/applications' },
+      { label: 'AI for Business' },
+    ]} />
+    <Fragment slot="subtitle">
+      <p>Artificial intelligence is transforming how organizations operate, analyze information, and serve customers. We help businesses identify practical AI use cases and implement solutions that improve efficiency, decision-making, automation, and innovation.</p>
+      <p>Our approach focuses on responsible, scalable AI adoption that delivers measurable business value.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="sub-services" aria-labelledby="aiBizTitle">
+    <div class="container">
+      <header class="section-head">
+        <span class="eyebrow">What We Deliver</span>
+        <h2 id="aiBizTitle" class="section-title">AI for Business Capabilities</h2>
+      </header>
+      <div class="sub-services__grid">
+
+        <DetailCard
+          title="AI Use Case Identification and Advisory"
+          description="We work with organizations to identify practical, high-value AI use cases aligned to business goals, operational processes, and available data — prioritizing impact and feasibility."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v1H6a3 3 0 0 0 0 6h1v1a5 5 0 0 0 10 0v-1h1a3 3 0 0 0 0-6h-1V7a5 5 0 0 0-5-5Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Intelligent Automation Solutions"
+          description="We design and implement intelligent automation solutions that replace manual, repetitive tasks with AI-driven processes that improve speed, accuracy, and scalability."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm-1 14-4-4 1.41-1.41L11 13.17l6.59-6.59L19 8l-8 8Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="AI-enabled Analytics and Decision Support"
+          description="We integrate AI capabilities into analytics environments to surface deeper insights, identify patterns, and support faster, more confident decision-making."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 17h4v-7H3v7Zm7 0h4V3h-4v14Zm7 0h4V8h-4v9Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Process Optimization Through Machine Learning"
+          description="We apply machine learning techniques to optimize business processes, improve forecasting, and enable predictive capabilities that reduce cost and improve outcomes."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58ZM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="AI Integration into Business Applications and Workflows"
+          description="We integrate AI tools and models into existing business applications and workflows, enabling teams to benefit from AI without disrupting current operations."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M4 6h16v2H4V6Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z"/></svg>
+        </DetailCard>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="value-strip" aria-label="Value proposition">
+    <div class="container value-strip__inner">
+      {[
+        'Unlock new efficiencies and insights',
+        'Accelerate innovation with practical AI solutions',
+        'Adopt AI responsibly and strategically',
+      ].map(item => (
+        <div class="value-strip__item">
+          <span class="value-strip__check">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path fill="white" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17Z"/></svg>
+          </span>
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>

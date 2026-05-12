@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import BreadcrumbNav from '../../components/BreadcrumbNav.astro';
+import DetailCard from '../../components/DetailCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+<BaseLayout
+  title="Third-party Security Management | CyberNovate"
+  description="Reduce supply-chain exposure with structured vendor risk assessments, due diligence, and third-party security audits."
+>
+
+  <PageHero eyebrow="Cybersecurity Services" title="Third-party Security Management">
+    <BreadcrumbNav slot="breadcrumb" crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Cybersecurity', href: '/cybersecurity' },
+      { label: 'Third-party Security' },
+    ]} />
+    <Fragment slot="subtitle">
+      <p>Third-party relationships can introduce significant cybersecurity risk. Vendors, service providers, partners, and outsourced platforms often have access to sensitive data, systems, and business processes. We help organizations establish structured third-party security management practices to reduce exposure and improve trust across the supply chain.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="sub-services" aria-labelledby="tpTitle">
+    <div class="container">
+      <header class="section-head">
+        <span class="eyebrow">Our Capabilities</span>
+        <h2 id="tpTitle" class="section-title">What We Deliver</h2>
+      </header>
+      <div class="sub-services__grid">
+
+        <DetailCard
+          title="Vendor Risk Assessments"
+          description="We evaluate the cybersecurity posture of vendors and service providers to identify potential risks before and during engagement. Our assessments help organizations make informed decisions and prioritize remediation where needed."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Vendor Security Due Diligence"
+          description="We perform security due diligence during vendor onboarding, procurement, mergers, acquisitions, and high-risk engagements. Our reviews assess whether third parties meet your security, compliance, and operational expectations."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Third-party Security Audits"
+          description="We conduct third-party security audits to review control effectiveness, contractual compliance, and alignment with your security requirements. These audits help improve oversight and support ongoing risk management."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 6h18v2H3V6Zm2 4h14v10H5V10Zm5 2v2h4v-2h-4Z"/></svg>
+        </DetailCard>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="value-strip" aria-label="Value proposition">
+    <div class="container value-strip__inner">
+      {[
+        'Reduce supply chain and vendor-related risks',
+        'Strengthen third-party oversight and accountability',
+        'Improve due diligence during onboarding and procurement',
+        'Support regulatory and contractual compliance expectations',
+      ].map(item => (
+        <div class="value-strip__item">
+          <span class="value-strip__check">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path fill="white" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17Z"/></svg>
+          </span>
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>

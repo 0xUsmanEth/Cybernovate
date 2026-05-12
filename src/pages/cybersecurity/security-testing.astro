@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import BreadcrumbNav from '../../components/BreadcrumbNav.astro';
+import DetailCard from '../../components/DetailCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+<BaseLayout
+  title="Security Testing & Assessment | CyberNovate"
+  description="Independent penetration testing, vulnerability assessments, and application security testing to uncover and remediate exploitable weaknesses."
+>
+
+  <PageHero eyebrow="Cybersecurity Services" title="Security Testing and Assessment">
+    <BreadcrumbNav slot="breadcrumb" crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Cybersecurity', href: '/cybersecurity' },
+      { label: 'Security Testing' },
+    ]} />
+    <Fragment slot="subtitle">
+      <p>Regular testing and assessment are critical for identifying weaknesses before they can be exploited. We provide independent security testing services that help organizations uncover vulnerabilities, validate controls, and strengthen resilience across infrastructure, applications, and code.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="sub-services" aria-labelledby="testingTitle">
+    <div class="container">
+      <header class="section-head">
+        <span class="eyebrow">Our Capabilities</span>
+        <h2 id="testingTitle" class="section-title">What We Deliver</h2>
+      </header>
+      <div class="sub-services__grid">
+
+        <DetailCard
+          title="Vulnerability Assessments"
+          description="We identify and analyze security weaknesses across systems, networks, applications, and environments. Our vulnerability assessments provide clear visibility into exposure, risk severity, and remediation priorities."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M21 11h-2.05A7 7 0 0 0 13 5.05V3h-2v2.05A7 7 0 0 0 5.05 11H3v2h2.05A7 7 0 0 0 11 18.95V21h2v-2.05A7 7 0 0 0 18.95 13H21v-2Zm-9 6a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Penetration Testing"
+          description="Our penetration testing services simulate real-world attack techniques to evaluate how effectively your systems, networks, and applications can resist compromise. We help uncover exploitable paths and provide actionable recommendations for remediation."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Zm-1 14-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 7Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Application Security Testing"
+          description="We perform static and dynamic application security testing to identify vulnerabilities throughout the software lifecycle. Our assessments help development and security teams improve application resilience and reduce the risk of exploitation."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4Zm5.2 0 4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Application Security Code Reviews"
+          description="We review source code to identify security flaws, insecure coding practices, and architecture weaknesses early in the development process. Our code review services help improve software quality and support secure development practices."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm-1 1.5L18.5 9H13V3.5ZM8 13h8v2H8v-2Zm0-4h5v2H8V9Z"/></svg>
+        </DetailCard>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="value-strip" aria-label="Value proposition">
+    <div class="container value-strip__inner">
+      {[
+        'Identify vulnerabilities before attackers do',
+        'Validate the effectiveness of security controls',
+        'Reduce risk across infrastructure and applications',
+        'Support secure development and remediation planning',
+      ].map(item => (
+        <div class="value-strip__item">
+          <span class="value-strip__check">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path fill="white" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17Z"/></svg>
+          </span>
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>

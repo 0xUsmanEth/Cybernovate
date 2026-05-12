@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import BreadcrumbNav from '../../components/BreadcrumbNav.astro';
+import DetailCard from '../../components/DetailCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+<BaseLayout
+  title="AI Cybersecurity Framework | CyberNovate"
+  description="Establish AI governance, risk and control models, and security policies for responsible and compliant AI adoption."
+>
+
+  <PageHero eyebrow="AI Services" title="AI Cybersecurity Framework">
+    <BreadcrumbNav slot="breadcrumb" crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'AI Services', href: '/ai-services' },
+      { label: 'AI Cybersecurity Framework' },
+    ]} />
+    <Fragment slot="subtitle">
+      <p>As organizations adopt AI, they must ensure that AI systems are governed, secure, and aligned with regulatory and ethical expectations. We help clients establish AI cybersecurity frameworks that define governance, controls, risk management, and security practices for AI adoption and operations.</p>
+      <p>Our framework services support safe and responsible AI implementation while helping organizations manage emerging AI-related risks.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="sub-services" aria-labelledby="aiFrameworkTitle">
+    <div class="container">
+      <header class="section-head">
+        <span class="eyebrow">What We Deliver</span>
+        <h2 id="aiFrameworkTitle" class="section-title">AI Cybersecurity Framework Capabilities</h2>
+      </header>
+      <div class="sub-services__grid">
+
+        <DetailCard
+          title="AI Governance and Security Framework Design"
+          description="We design comprehensive AI governance and security frameworks that define accountability, oversight structures, control requirements, and operating principles for AI adoption."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 3h8v8H3V3Zm10 0h8v8h-8V3ZM3 13h8v8H3v-8Zm10 4 4-4 4 4-4 4-4-4Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Risk and Control Models for AI Systems"
+          description="We develop risk and control models tailored to AI systems, helping organizations identify, assess, and manage risks associated with AI design, data, and operations."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2 1 21h22L12 2Zm0 4 7.5 13H4.5L12 6Zm-1 5v4h2v-4h-2Zm0 5v2h2v-2h-2Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Policies and Standards for Secure AI Adoption"
+          description="We create policies and standards that guide responsible AI adoption, covering data use, model management, access controls, and ethical considerations."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm-1 1.5L18.5 9H13V3.5ZM8 13h8v2H8v-2Zm0-4h5v2H8V9Zm0 8h8v2H8v-2Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="AI-related Compliance and Assurance Support"
+          description="We help organizations meet emerging AI compliance requirements and regulatory expectations by aligning frameworks to relevant standards and supporting assurance activities."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Security Considerations for AI Lifecycle Management"
+          description="We embed security considerations into AI lifecycle management — from development and testing through deployment, monitoring, and decommissioning."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46A7.93 7.93 0 0 0 20 12c0-4.42-3.58-8-8-8Zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74A7.93 7.93 0 0 0 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3Z"/></svg>
+        </DetailCard>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="value-strip" aria-label="Value proposition">
+    <div class="container value-strip__inner">
+      {[
+        'Establish secure and governed AI adoption',
+        'Manage emerging AI security and compliance risks',
+        'Build trust in AI-driven systems and decision-making',
+      ].map(item => (
+        <div class="value-strip__item">
+          <span class="value-strip__check">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path fill="white" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17Z"/></svg>
+          </span>
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>

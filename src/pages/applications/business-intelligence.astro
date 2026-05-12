@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import BreadcrumbNav from '../../components/BreadcrumbNav.astro';
+import DetailCard from '../../components/DetailCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+<BaseLayout
+  title="Business Intelligence Services | CyberNovate"
+  description="Transform data into actionable insight with BI strategy, dashboard development, and data visualization services."
+>
+
+  <PageHero eyebrow="Application Services" title="Business Intelligence">
+    <BreadcrumbNav slot="breadcrumb" crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Applications', href: '/applications' },
+      { label: 'Business Intelligence' },
+    ]} />
+    <Fragment slot="subtitle">
+      <p>Data becomes valuable when it is transformed into clear, actionable insight. Our business intelligence services help organizations collect, organize, analyze, and visualize data to improve decision-making and performance management.</p>
+      <p>We design BI solutions that provide leaders and teams with trusted information, meaningful dashboards, and reporting capabilities tailored to strategic and operational goals.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="sub-services" aria-labelledby="biTitle">
+    <div class="container">
+      <header class="section-head">
+        <span class="eyebrow">What We Deliver</span>
+        <h2 id="biTitle" class="section-title">Business Intelligence Capabilities</h2>
+      </header>
+      <div class="sub-services__grid">
+
+        <DetailCard
+          title="BI Strategy and Reporting Frameworks"
+          description="We help organizations define their BI strategy, data governance approach, and reporting infrastructure to build a reliable foundation for analytics and insight."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 17h4v-7H3v7Zm7 0h4V3h-4v14Zm7 0h4V8h-4v9Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Dashboard and Analytics Development"
+          description="We design and build interactive dashboards and analytics tools that give teams clear visibility into performance, operations, and strategic metrics."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 13h8V3H3v10Zm0 8h8v-6H3v6Zm10 0h8V11h-8v10Zm0-18v6h8V3h-8Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Data Visualization and KPI Monitoring"
+          description="We translate complex data into clear visual formats and KPI dashboards that support faster, more confident decision-making at every level of the organization."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M9 17H7v-7h2v7Zm4 0h-2V7h2v10Zm4 0h-2v-4h2v4Zm2 2H5V5h14v14Zm0-16H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Data Integration for Reporting Environments"
+          description="We connect and consolidate data sources across systems and platforms to create unified, accurate reporting environments that teams can trust."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M4 6h16v2H4V6Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Decision-support Solutions for Business Stakeholders"
+          description="We build reporting and analytics solutions tailored to the specific needs of business leaders, operational teams, and functional stakeholders."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5Z"/></svg>
+        </DetailCard>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="value-strip" aria-label="Value proposition">
+    <div class="container value-strip__inner">
+      {[
+        'Improve visibility into business performance',
+        'Enable faster, data-driven decisions',
+        'Create a more consistent and trusted reporting environment',
+      ].map(item => (
+        <div class="value-strip__item">
+          <span class="value-strip__check">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path fill="white" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17Z"/></svg>
+          </span>
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>

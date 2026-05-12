@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import BreadcrumbNav from '../../components/BreadcrumbNav.astro';
+import DetailCard from '../../components/DetailCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+<BaseLayout
+  title="Cybersecurity Strategy & Transformation | CyberNovate"
+  description="Transform your cybersecurity program with maturity assessments, roadmap development, and program transformation services."
+>
+
+  <PageHero eyebrow="Cybersecurity Services" title="Cybersecurity Strategy and Transformation">
+    <BreadcrumbNav slot="breadcrumb" crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Cybersecurity', href: '/cybersecurity' },
+      { label: 'Strategy & Transformation' },
+    ]} />
+    <Fragment slot="subtitle">
+      <p>As organizations grow and threat landscapes evolve, cybersecurity programs must adapt. We help clients assess current capabilities, define future-state objectives, and transform cybersecurity programs into more mature, efficient, and business-aligned functions.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="sub-services" aria-labelledby="stratTitle">
+    <div class="container">
+      <header class="section-head">
+        <span class="eyebrow">Our Capabilities</span>
+        <h2 id="stratTitle" class="section-title">What We Deliver</h2>
+      </header>
+      <div class="sub-services__grid">
+
+        <DetailCard
+          title="Cybersecurity Strategy & Roadmap Development"
+          description="We create clear, actionable cybersecurity strategies and roadmaps that align investments with business priorities, risk reduction goals, and compliance requirements. Our roadmaps provide a practical sequence for improving capabilities over time."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 17h6v-7H3v7Zm7 0h4V3h-4v14Zm5 0h6V8h-6v9Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Cybersecurity Program Transformation"
+          description="We help organizations redesign and enhance cybersecurity operating models, governance structures, processes, technologies, and delivery approaches. Our transformation services focus on measurable improvement and lasting capability development."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Cybersecurity Maturity Assessments"
+          description="We assess your cybersecurity maturity across people, process, technology, and governance dimensions to identify strengths, gaps, and improvement opportunities. Our assessments provide a benchmark for planning future investments and transformation initiatives."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M21 11h-2.05A7 7 0 0 0 13 5.05V3h-2v2.05A7 7 0 0 0 5.05 11H3v2h2.05A7 7 0 0 0 11 18.95V21h2v-2.05A7 7 0 0 0 18.95 13H21v-2Zm-9 6a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z"/></svg>
+        </DetailCard>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="value-strip" aria-label="Value proposition">
+    <div class="container value-strip__inner">
+      {[
+        'Align cybersecurity with business strategy and growth',
+        'Improve maturity, efficiency, and accountability',
+        'Prioritize investments with a clear transformation roadmap',
+        'Enable sustainable, long-term security improvement',
+      ].map(item => (
+        <div class="value-strip__item">
+          <span class="value-strip__check">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path fill="white" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17Z"/></svg>
+          </span>
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>

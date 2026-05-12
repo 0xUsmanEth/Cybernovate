@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+<BaseLayout
+  title="About CyberNovate | Innovate. Secure. Transform."
+  description="CyberNovate is an IT and cybersecurity services company helping organizations innovate securely and transform with confidence."
+>
+
+  <PageHero eyebrow="About Us" title="CyberNovate — Innovate Secure Transform">
+    <Fragment slot="subtitle">
+      <p>A trusted partner for resilient, future-ready businesses.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="about" aria-labelledby="aboutTitle">
+    <div class="container about__inner">
+      <div class="about__copy">
+        <span class="eyebrow">About CyberNovate</span>
+        <h2 id="aboutTitle" class="section-title">A trusted partner for resilient, future-ready businesses.</h2>
+        <p>
+          CyberNovate is an IT and cybersecurity services company committed to helping organizations
+          operate securely, efficiently, and with confidence in a rapidly evolving digital world. Our
+          services combine strategic advisory, technical expertise, and practical implementation to address
+          today's most pressing challenges across cybersecurity, applications, and artificial intelligence.
+          Guided by our slogan, <strong>Innovate Secure Transform</strong>, we help clients embrace
+          innovation, strengthen security, and deliver meaningful transformation.
+        </p>
+        <p>
+          We work with organizations to reduce cyber risk, meet regulatory requirements, modernize
+          technology environments, and unlock new opportunities through innovation. Our mission is to
+          deliver measurable outcomes through trusted partnerships, high-quality execution, and solutions
+          tailored to each client's needs.
+        </p>
+
+        <ul class="about__points">
+          <li><span></span>CyberNovate: Innovate Secure Transform</li>
+          <li><span></span>Business-focused and security-driven</li>
+          <li><span></span>Practical solutions tailored to your environment</li>
+          <li><span></span>End-to-end capabilities from strategy to implementation</li>
+          <li><span></span>Commitment to resilience, compliance, and innovation</li>
+        </ul>
+
+        <a href="/contact" class="btn btn--primary"><span>Partner with us</span></a>
+      </div>
+
+      <div class="about__visual" aria-hidden="true">
+        <div class="about__shield">
+          <svg viewBox="0 0 200 240" width="100%" height="100%">
+            <defs>
+              <linearGradient id="shieldGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#1FA8E0"/>
+                <stop offset="100%" stop-color="#0A2540"/>
+              </linearGradient>
+            </defs>
+            <path d="M100 10 L180 40 L180 130 Q180 200 100 230 Q20 200 20 130 L20 40 Z"
+                  fill="url(#shieldGrad)" opacity="0.92"/>
+            <path d="M100 22 L168 48 L168 130 Q168 192 100 218 Q32 192 32 130 L32 48 Z"
+                  fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+            <text x="100" y="135" text-anchor="middle" fill="#fff" font-family="Sora, sans-serif"
+                  font-size="56" font-weight="700">CN</text>
+          </svg>
+        </div>
+        <div class="about__rings">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>

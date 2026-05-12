@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import BreadcrumbNav from '../../components/BreadcrumbNav.astro';
+import DetailCard from '../../components/DetailCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+<BaseLayout
+  title="Security Architecture & Design | CyberNovate"
+  description="Embed security into your environment with network security architecture, Zero Trust design, and secure cloud architecture."
+>
+
+  <PageHero eyebrow="Cybersecurity Services" title="Security Architecture and Design">
+    <BreadcrumbNav slot="breadcrumb" crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Cybersecurity', href: '/cybersecurity' },
+      { label: 'Security Architecture' },
+    ]} />
+    <Fragment slot="subtitle">
+      <p>Effective security must be built into the foundation of your technology environment. Our security architecture and design services help organizations create secure, scalable, and resilient environments across networks, applications, cloud platforms, and enterprise systems.</p>
+      <p>We work with clients to design security solutions that align with business requirements, operational needs, regulatory expectations, and future growth.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="sub-services" aria-labelledby="archTitle">
+    <div class="container">
+      <header class="section-head">
+        <span class="eyebrow">Our Capabilities</span>
+        <h2 id="archTitle" class="section-title">What We Deliver</h2>
+      </header>
+      <div class="sub-services__grid">
+
+        <DetailCard
+          title="Network Security Architecture"
+          description="We design secure network architectures that improve segmentation, access control, visibility, and resilience. Our approach helps reduce attack surface and support secure connectivity across enterprise and hybrid environments."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M4 6h16v2H4V6Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Application Security Design"
+          description="We help embed security into application design through secure architecture principles, threat-informed design decisions, and development lifecycle integration. This reduces vulnerabilities and improves long-term application resilience."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4Zm5.2 0 4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Secure Cloud Architecture"
+          description="We design secure cloud environments across public, private, and hybrid platforms. Our services focus on identity, configuration, access control, workload security, data protection, and governance to help organizations adopt cloud securely."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Security Solution Design and Implementation"
+          description="We support the design and implementation of security solutions that address your operational and strategic requirements. From control selection to deployment guidance, we help ensure solutions are aligned, effective, and sustainable."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 3h8v8H3V3Zm10 0h8v8h-8V3ZM3 13h8v8H3v-8Zm10 0h8v8h-8v-8Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Zero Trust Architecture"
+          description="We help organizations move toward a Zero Trust model by redesigning access, segmentation, identity controls, and trust assumptions. Our Zero Trust services support stronger protection for users, devices, applications, and data."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4Z"/></svg>
+        </DetailCard>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="value-strip" aria-label="Value proposition">
+    <div class="container value-strip__inner">
+      {[
+        'Build security into your technology foundation',
+        'Reduce attack surface and architectural risk',
+        'Support secure cloud adoption and digital transformation',
+        'Improve resilience through modern security design principles',
+      ].map(item => (
+        <div class="value-strip__item">
+          <span class="value-strip__check">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path fill="white" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17Z"/></svg>
+          </span>
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>

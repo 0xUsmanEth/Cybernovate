@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+<BaseLayout
+  title="Contact CyberNovate | Get a Consultation"
+  description="Get in touch with CyberNovate for cybersecurity, application, and AI services in Saudi Arabia and the GCC."
+>
+
+  <PageHero eyebrow="Get in Touch" title="Let's build a more secure and future-ready business">
+    <Fragment slot="subtitle">
+      <p>Whether you need support with cybersecurity governance, security testing, architecture, managed services, application modernization, or AI strategy, our team is ready to help.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="contact" aria-labelledby="contactTitle">
+    <div class="container contact__inner">
+      <div class="contact__copy">
+        <span class="eyebrow">Contact</span>
+        <h2 id="contactTitle" class="section-title">Get in touch</h2>
+        <p>
+          Get in touch to discuss your goals, current challenges, and how we can support your
+          organization with tailored solutions that deliver lasting value.
+        </p>
+
+        <ul class="contact__channels">
+          <li>
+            <div class="contact__icon">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v.4l8 5 8-5V6H4Zm16 2.5-7.42 4.64a1 1 0 0 1-1.16 0L4 8.5V18h16V8.5Z"/></svg>
+            </div>
+            <div><strong>Email</strong><a href="mailto:hello@cybernovate.io">hello@cybernovate.io</a></div>
+          </li>
+          <li>
+            <div class="contact__icon">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1l-2.22 2.2Z"/></svg>
+            </div>
+            <div><strong>Phone</strong><span>Available on request</span></div>
+          </li>
+          <li>
+            <div class="contact__icon">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2a8 8 0 0 0-8 8c0 5.6 8 12 8 12s8-6.4 8-12a8 8 0 0 0-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/></svg>
+            </div>
+            <div><strong>Service area</strong><span>Kingdom of Saudi Arabia &amp; the wider GCC</span></div>
+          </li>
+        </ul>
+      </div>
+
+      <form class="form" id="contactForm" novalidate aria-label="Contact form">
+        <div class="form__head">
+          <h3>Request a consultation</h3>
+          <p>We'll respond within one business day.</p>
+        </div>
+
+        <div class="form__row">
+          <label class="field">
+            <span class="field__label">Full name <em>*</em></span>
+            <input type="text" name="name" required maxlength="100" autocomplete="name" />
+            <span class="field__error" aria-live="polite"></span>
+          </label>
+          <label class="field">
+            <span class="field__label">Work email <em>*</em></span>
+            <input type="email" name="email" required maxlength="150" autocomplete="email" />
+            <span class="field__error" aria-live="polite"></span>
+          </label>
+        </div>
+
+        <div class="form__row">
+          <label class="field">
+            <span class="field__label">Company</span>
+            <input type="text" name="company" maxlength="120" autocomplete="organization" />
+          </label>
+          <label class="field">
+            <span class="field__label">Phone</span>
+            <input type="tel" name="phone" maxlength="30" autocomplete="tel" />
+          </label>
+        </div>
+
+        <label class="field">
+          <span class="field__label">Service of interest</span>
+          <select name="service">
+            <option value="">— Select —</option>
+            <option>Governance Risk &amp; Compliance</option>
+            <option>Cybersecurity Consulting</option>
+            <option>Third-party Security</option>
+            <option>Security Testing</option>
+            <option>Security Architecture</option>
+            <option>Strategy &amp; Transformation</option>
+            <option>Business Intelligence</option>
+            <option>System Integration</option>
+            <option>Technology Consulting</option>
+            <option>IT Managed Services</option>
+            <option>AI for Business</option>
+            <option>Cybersecurity for AI</option>
+            <option>AI Cybersecurity Framework</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Message <em>*</em></span>
+          <textarea name="message" rows="5" required maxlength="2000"></textarea>
+          <span class="field__error" aria-live="polite"></span>
+        </label>
+
+        <!-- Honeypot (anti-spam) -->
+        <div class="hp" aria-hidden="true">
+          <label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+        </div>
+
+        <label class="checkbox">
+          <input type="checkbox" name="consent" required />
+          <span>I agree to be contacted by CyberNovate regarding my enquiry.</span>
+        </label>
+
+        <button type="submit" class="btn btn--primary form__submit">
+          <span>Send message</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M2 12 22 4l-4 18-5-7-3 5-1-8-7-0Z"/></svg>
+        </button>
+
+        <!-- TODO: Connect to Netlify Forms or preferred API endpoint -->
+        <div class="form__success" id="formSuccess" role="status" hidden>
+          <strong>Thank you!</strong> We'll be in touch shortly.
+        </div>
+      </form>
+    </div>
+  </section>
+
+</BaseLayout>

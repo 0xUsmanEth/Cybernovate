@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import BreadcrumbNav from '../../components/BreadcrumbNav.astro';
+import DetailCard from '../../components/DetailCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+<BaseLayout
+  title="System Integration Services | CyberNovate"
+  description="Connect applications, platforms, and data flows with enterprise integration, API solutions, and workflow automation."
+>
+
+  <PageHero eyebrow="Application Services" title="System Integration">
+    <BreadcrumbNav slot="breadcrumb" crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Applications', href: '/applications' },
+      { label: 'System Integration' },
+    ]} />
+    <Fragment slot="subtitle">
+      <p>Disconnected systems create inefficiency, data silos, and operational challenges. Our system integration services help organizations connect applications, platforms, and data flows to improve interoperability, automation, and business continuity.</p>
+      <p>We design and implement integration solutions that enable systems to work together more effectively and support streamlined digital operations.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="sub-services" aria-labelledby="siTitle">
+    <div class="container">
+      <header class="section-head">
+        <span class="eyebrow">What We Deliver</span>
+        <h2 id="siTitle" class="section-title">System Integration Capabilities</h2>
+      </header>
+      <div class="sub-services__grid">
+
+        <DetailCard
+          title="Enterprise Application Integration"
+          description="We connect enterprise systems, platforms, and business applications to eliminate silos, reduce duplication, and create a more unified technology environment."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M4 6h16v2H4V6Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="API and Middleware Integration Solutions"
+          description="We design and implement API-based and middleware integration layers that enable secure, flexible, and scalable connectivity between applications and services."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4Zm5.2 0 4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Process Automation and Workflow Enablement"
+          description="We automate manual, repetitive processes and enable automated workflows that improve efficiency, accuracy, and operational speed."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm-1 14-4-4 1.41-1.41L11 13.17l6.59-6.59L19 8l-8 8Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Data Synchronization Across Platforms"
+          description="We ensure data accuracy and consistency across connected systems by designing synchronization processes that keep information up to date across the technology landscape."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46A7.93 7.93 0 0 0 20 12c0-4.42-3.58-8-8-8Zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74A7.93 7.93 0 0 0 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Legacy and Modern System Connectivity"
+          description="We bridge legacy platforms with modern applications to extend system life, preserve existing investments, and enable gradual modernization."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2 2 7l10 5 10-5-10-5Zm0 11L2 8v9l10 5 10-5V8l-10 5Z"/></svg>
+        </DetailCard>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="value-strip" aria-label="Value proposition">
+    <div class="container value-strip__inner">
+      {[
+        'Reduce manual effort and system fragmentation',
+        'Improve process efficiency and data consistency',
+        'Enable smoother operations across the technology landscape',
+      ].map(item => (
+        <div class="value-strip__item">
+          <span class="value-strip__check">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path fill="white" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17Z"/></svg>
+          </span>
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>

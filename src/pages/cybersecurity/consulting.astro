@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import BreadcrumbNav from '../../components/BreadcrumbNav.astro';
+import DetailCard from '../../components/DetailCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+<BaseLayout
+  title="Cybersecurity Consulting & vCISO | CyberNovate"
+  description="Expert cybersecurity advisory, Virtual CISO services, staff augmentation, and managed security to strengthen your security operations."
+>
+
+  <PageHero eyebrow="Cybersecurity Services" title="Cybersecurity Consulting Services">
+    <BreadcrumbNav slot="breadcrumb" crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Cybersecurity', href: '/cybersecurity' },
+      { label: 'Consulting' },
+    ]} />
+    <Fragment slot="subtitle">
+      <p>Organizations often need flexible cybersecurity expertise to address strategic challenges, operational demands, or specialized security initiatives. Our consulting services provide access to experienced professionals who help you strengthen security operations, fill capability gaps, and manage evolving risks effectively.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="sub-services" aria-labelledby="consultingTitle">
+    <div class="container">
+      <header class="section-head">
+        <span class="eyebrow">Our Capabilities</span>
+        <h2 id="consultingTitle" class="section-title">What We Deliver</h2>
+      </header>
+      <div class="sub-services__grid">
+
+        <DetailCard
+          title="Cybersecurity Advisory"
+          description="Our cybersecurity advisory services help organizations make informed security decisions at both strategic and operational levels. We provide expert guidance on governance, risk, compliance, program development, control improvement, and security investment priorities to help clients strengthen resilience and align cybersecurity with business goals."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Virtual CISO (vCISO)"
+          description="Our vCISO services provide executive-level cybersecurity leadership without the cost of a full-time Chief Information Security Officer. We help define strategy, guide governance, advise leadership, manage regulatory priorities, and oversee cybersecurity initiatives to improve business resilience."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Staff Augmentation"
+          description="We provide skilled cybersecurity professionals to support your internal teams across governance, risk, compliance, operations, assessments, engineering, and project delivery. Our staff augmentation model offers the flexibility to scale capabilities based on your business needs."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3Zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3Zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5Zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Managed Security Services"
+          description="Our managed security services help organizations improve visibility, monitoring, control effectiveness, and operational response. We deliver ongoing support that enables clients to manage security more efficiently while reducing pressure on internal resources."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M21 11h-2.05A7 7 0 0 0 13 5.05V3h-2v2.05A7 7 0 0 0 5.05 11H3v2h2.05A7 7 0 0 0 11 18.95V21h2v-2.05A7 7 0 0 0 18.95 13H21v-2Zm-9 6a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="OT Cybersecurity"
+          description="Operational technology environments require specialized security controls and a deep understanding of industrial systems, availability requirements, and safety considerations. We help organizations assess and strengthen OT security to reduce risk across critical infrastructure and industrial operations."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2 2 7l10 5 10-5-10-5Zm0 11L2 8v9l10 5 10-5V8l-10 5Z"/></svg>
+        </DetailCard>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="value-strip" aria-label="Value proposition">
+    <div class="container value-strip__inner">
+      {[
+        'Access experienced cybersecurity expertise on demand',
+        'Strengthen leadership, delivery, and operational capabilities',
+        'Improve resilience across IT and OT environments',
+        'Scale resources efficiently based on changing needs',
+      ].map(item => (
+        <div class="value-strip__item">
+          <span class="value-strip__check">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path fill="white" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17Z"/></svg>
+          </span>
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>

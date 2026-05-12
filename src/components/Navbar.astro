@@ -1,0 +1,96 @@
+---
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+
+const active = (path: string) => {
+  if (path === '/') return currentPath === '/';
+  return currentPath.startsWith(path);
+};
+---
+<header class="header" id="siteHeader">
+  <div class="container header__inner">
+    <a href="/" class="header__brand" aria-label="CyberNovate home">
+      <img src="/assets/logo.png" alt="CyberNovate" class="header__logo" width="160" height="42" />
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="/" class={`nav__link${active('/') ? ' is-active' : ''}`}>Home</a></li>
+
+        <li class="nav__item--has-menu">
+          <a href="/cybersecurity" class={`nav__link${active('/cybersecurity') ? ' is-active' : ''}`} aria-haspopup="true">
+            Cybersecurity
+            <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path fill="currentColor" d="M5 7 1 3h8z"/></svg>
+          </a>
+          <div class="nav__submenu" role="menu">
+            <a href="/cybersecurity/governance-risk-compliance" role="menuitem">Governance, Risk &amp; Compliance</a>
+            <a href="/cybersecurity/consulting" role="menuitem">Cybersecurity Consulting</a>
+            <a href="/cybersecurity/third-party-security" role="menuitem">Third-party Security Management</a>
+            <a href="/cybersecurity/security-testing" role="menuitem">Security Testing &amp; Assessment</a>
+            <a href="/cybersecurity/security-architecture" role="menuitem">Security Architecture &amp; Design</a>
+            <a href="/cybersecurity/strategy-transformation" role="menuitem">Strategy &amp; Transformation</a>
+          </div>
+        </li>
+
+        <li class="nav__item--has-menu">
+          <a href="/applications" class={`nav__link${active('/applications') ? ' is-active' : ''}`} aria-haspopup="true">
+            Applications
+            <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path fill="currentColor" d="M5 7 1 3h8z"/></svg>
+          </a>
+          <div class="nav__submenu" role="menu">
+            <a href="/applications/business-intelligence" role="menuitem">Business Intelligence</a>
+            <a href="/applications/system-integration" role="menuitem">System Integration</a>
+            <a href="/applications/technology-consulting" role="menuitem">Technology Consulting</a>
+            <a href="/applications/it-managed-services" role="menuitem">IT Managed Services</a>
+            <a href="/applications/ai-for-business" role="menuitem">AI for Business</a>
+          </div>
+        </li>
+
+        <li><a href="/ai-services" class={`nav__link${active('/ai-services') ? ' is-active' : ''}`}>AI Services</a></li>
+        <li><a href="/about" class={`nav__link${active('/about') ? ' is-active' : ''}`}>About</a></li>
+        <li><a href="/contact" class={`nav__link${active('/contact') ? ' is-active' : ''}`}>Contact</a></li>
+      </ul>
+    </nav>
+
+    <a href="/contact" class="btn btn--primary header__cta">Get a Quote</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="/">Home</a>
+
+    <p class="mobile-nav__section">Cybersecurity</p>
+    <a href="/cybersecurity">All Cybersecurity Services</a>
+    <a href="/cybersecurity/governance-risk-compliance" class="sub">Governance, Risk &amp; Compliance</a>
+    <a href="/cybersecurity/consulting" class="sub">Cybersecurity Consulting</a>
+    <a href="/cybersecurity/third-party-security" class="sub">Third-party Security</a>
+    <a href="/cybersecurity/security-testing" class="sub">Security Testing &amp; Assessment</a>
+    <a href="/cybersecurity/security-architecture" class="sub">Security Architecture &amp; Design</a>
+    <a href="/cybersecurity/strategy-transformation" class="sub">Strategy &amp; Transformation</a>
+
+    <p class="mobile-nav__section">Applications</p>
+    <a href="/applications">All Application Services</a>
+    <a href="/applications/business-intelligence" class="sub">Business Intelligence</a>
+    <a href="/applications/system-integration" class="sub">System Integration</a>
+    <a href="/applications/technology-consulting" class="sub">Technology Consulting</a>
+    <a href="/applications/it-managed-services" class="sub">IT Managed Services</a>
+    <a href="/applications/ai-for-business" class="sub">AI for Business</a>
+
+    <p class="mobile-nav__section">AI Services</p>
+    <a href="/ai-services">All AI Services</a>
+    <a href="/ai-services/cybersecurity-for-ai" class="sub">Cybersecurity for AI</a>
+    <a href="/ai-services/ai-cybersecurity-framework" class="sub">AI Cybersecurity Framework</a>
+
+    <p class="mobile-nav__section">Company</p>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+
+    <a href="/contact" class="btn btn--primary mobile-nav__cta">Get a Quote</a>
+  </div>
+</header>

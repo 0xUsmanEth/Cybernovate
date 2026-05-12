@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+<BaseLayout
+  title="Cybersecurity Services | CyberNovate"
+  description="Comprehensive cybersecurity services covering governance, compliance, risk, assessments, architecture, consulting, and transformation."
+>
+
+  <PageHero eyebrow="Cybersecurity" title="Cybersecurity Services">
+    <Fragment slot="subtitle">
+      <p>Cybersecurity is no longer optional. It is a business priority. Our cybersecurity services help organizations build strong governance, manage risk, improve visibility, secure critical infrastructure, and respond to evolving threats with confidence.</p>
+      <p>We provide tailored cybersecurity solutions across governance, consulting, third-party security, testing, architecture, and transformation to support your regulatory, operational, and strategic objectives.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="services" aria-labelledby="cyberServicesTitle">
+    <div class="container">
+      <h2 id="cyberServicesTitle" class="section-title" style="margin-bottom: 36px;">Our Cybersecurity Services</h2>
+      <div class="services__grid">
+
+        <ServiceCard
+          num="01"
+          title="Governance, Risk and Compliance"
+          description="Build robust GRC frameworks aligned to NCA, SAMA, PDPL, NIST, and ISO 27001 with audit-ready documentation and risk programs."
+          bullets={['Regulatory & Compliance Management','Policy & Procedure Development','Risk Management','Framework Implementation','Audit & Compliance']}
+          ctaText="Explore GRC"
+          href="/cybersecurity/governance-risk-compliance"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4Z"/></svg>
+        </ServiceCard>
+
+        <ServiceCard
+          num="02"
+          title="Cybersecurity Consulting Services"
+          description="Access experienced cybersecurity expertise through advisory, vCISO, staff augmentation, managed security, and OT security services."
+          bullets={['Cybersecurity Advisory','Virtual CISO (vCISO)','Staff Augmentation','Managed Security Services','OT Cybersecurity']}
+          ctaText="Explore Consulting"
+          href="/cybersecurity/consulting"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5Z"/></svg>
+        </ServiceCard>
+
+        <ServiceCard
+          num="03"
+          title="Third-party Security Management"
+          description="Reduce supply-chain exposure with structured vendor risk assessments, due diligence, and third-party security audits."
+          bullets={['Vendor Risk Assessments','Vendor Security Due Diligence','Third-party Security Audits']}
+          ctaText="Explore Third-party Security"
+          href="/cybersecurity/third-party-security"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M3 6h18v2H3V6Zm2 4h14v10H5V10Zm5 2v2h4v-2h-4Z"/></svg>
+        </ServiceCard>
+
+        <ServiceCard
+          num="04"
+          title="Security Testing and Assessment"
+          description="Independent penetration testing, vulnerability assessments, and application security testing to uncover and remediate exploitable weaknesses."
+          bullets={['Vulnerability Assessments','Penetration Testing','Application Security Testing','Code Reviews']}
+          ctaText="Explore Security Testing"
+          href="/cybersecurity/security-testing"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M21 11h-2.05A7 7 0 0 0 13 5.05V3h-2v2.05A7 7 0 0 0 5.05 11H3v2h2.05A7 7 0 0 0 11 18.95V21h2v-2.05A7 7 0 0 0 18.95 13H21v-2Zm-9 6a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z"/></svg>
+        </ServiceCard>
+
+        <ServiceCard
+          num="05"
+          title="Security Architecture and Design"
+          description="Embed security into your environment with network security architecture, Zero Trust design, and secure cloud architecture."
+          bullets={['Network Security Architecture','Application Security Design','Secure Cloud Architecture','Zero Trust Architecture']}
+          ctaText="Explore Architecture"
+          href="/cybersecurity/security-architecture"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M3 3h8v8H3V3Zm10 0h8v8h-8V3ZM3 13h8v8H3v-8Zm10 0h8v8h-8v-8Z"/></svg>
+        </ServiceCard>
+
+        <ServiceCard
+          num="06"
+          title="Cybersecurity Strategy and Transformation"
+          description="Transform your cybersecurity program with maturity assessments, roadmap development, and program transformation services."
+          bullets={['Strategy & Roadmap Development','Program Transformation','Maturity Assessments']}
+          ctaText="Explore Strategy"
+          href="/cybersecurity/strategy-transformation"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M3 17h6v-7H3v7Zm7 0h4V3h-4v14Zm5 0h6V8h-6v9Z"/></svg>
+        </ServiceCard>
+
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>

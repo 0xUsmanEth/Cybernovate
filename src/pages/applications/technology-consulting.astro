@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import BreadcrumbNav from '../../components/BreadcrumbNav.astro';
+import DetailCard from '../../components/DetailCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+<BaseLayout
+  title="Technology Consulting | CyberNovate"
+  description="Independent IT strategy, architecture planning, and digital transformation consulting to guide your technology investments."
+>
+
+  <PageHero eyebrow="Application Services" title="Technology Consulting">
+    <BreadcrumbNav slot="breadcrumb" crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Applications', href: '/applications' },
+      { label: 'Technology Consulting' },
+    ]} />
+    <Fragment slot="subtitle">
+      <p>Making the right technology decisions requires a balance of business priorities, technical feasibility, scalability, and cost effectiveness. Our technology consulting services help organizations evaluate options, define solution strategies, and make informed investment decisions.</p>
+      <p>We provide independent, practical guidance that supports digital transformation, modernization, and improved technology governance.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="sub-services" aria-labelledby="tcTitle">
+    <div class="container">
+      <header class="section-head">
+        <span class="eyebrow">What We Deliver</span>
+        <h2 id="tcTitle" class="section-title">Technology Consulting Capabilities</h2>
+      </header>
+      <div class="sub-services__grid">
+
+        <DetailCard
+          title="IT Strategy and Advisory Services"
+          description="We help organizations define clear IT strategies that align technology direction with business goals, operational needs, and long-term growth plans."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Architecture and Solution Planning"
+          description="We design scalable, secure, and practical technology architectures and solution blueprints that support current requirements and future expansion."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 3h8v8H3V3Zm10 0h8v8h-8V3ZM3 13h8v8H3v-8Zm10 0h8v8h-8v-8Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Technology Assessments and Recommendations"
+          description="We evaluate your existing technology landscape to identify gaps, risks, and opportunities, and provide actionable recommendations for improvement."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="currentColor" d="M11 7h2v6h-2zM11 14h2v2h-2z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Digital Transformation Consulting"
+          description="We guide organizations through digital transformation initiatives by helping them define scope, prioritize change, manage complexity, and deliver outcomes."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm1 15h-2v-6h2v6Zm0-8h-2V7h2v2Z"/></svg>
+        </DetailCard>
+
+        <DetailCard
+          title="Roadmaps for Modernization and Optimization"
+          description="We create structured technology roadmaps that provide a clear, sequenced path toward modernization, optimization, and improved capability."
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 17h6v-7H3v7Zm7 0h4V3h-4v14Zm5 0h6V8h-6v9Z"/></svg>
+        </DetailCard>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="value-strip" aria-label="Value proposition">
+    <div class="container value-strip__inner">
+      {[
+        'Make more confident technology decisions',
+        'Align IT investments with business objectives',
+        'Reduce risk in planning and implementation',
+      ].map(item => (
+        <div class="value-strip__item">
+          <span class="value-strip__check">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path fill="white" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17Z"/></svg>
+          </span>
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>

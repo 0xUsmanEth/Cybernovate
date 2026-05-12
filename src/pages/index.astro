@@ -1,0 +1,264 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+<BaseLayout
+  title="CyberNovate — Innovate. Secure. Transform."
+  description="CyberNovate helps organizations build resilient digital operations through expert cybersecurity, advanced application services, and practical AI solutions."
+>
+
+  <!-- ========== HERO SLIDER ========== -->
+  <section class="hero" id="home" aria-label="Hero">
+    <div class="hero__bg">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
+    </div>
+
+    <div class="container hero__inner">
+      <div class="slider" id="heroSlider" aria-roledescription="carousel">
+
+        <article class="slide slide--active" data-slide="0" aria-roledescription="slide" aria-label="1 of 3">
+          <span class="slide__eyebrow"><span class="slide__dot"></span> Innovate</span>
+          <h1 class="slide__title">
+            Where <span class="grad">innovation</span> meets transformation through <span class="grad">security</span>.
+          </h1>
+          <p class="slide__lede">
+            CyberNovate helps organizations build resilient digital operations through expert cybersecurity,
+            advanced application services, and practical artificial intelligence solutions. From governance
+            and compliance to architecture, testing, managed services, and transformation, we deliver the
+            strategy and execution needed to protect critical assets and accelerate business performance.
+          </p>
+          <div class="slide__actions">
+            <a href="/cybersecurity" class="btn btn--primary"><span>Discover our services</span></a>
+            <a href="/contact" class="btn btn--ghost">Talk to our experts →</a>
+          </div>
+        </article>
+
+        <article class="slide" data-slide="1" aria-roledescription="slide" aria-label="2 of 3" hidden>
+          <span class="slide__eyebrow"><span class="slide__dot"></span> Secure</span>
+          <h1 class="slide__title">
+            Build <span class="grad">resilient</span> digital operations you can trust.
+          </h1>
+          <p class="slide__lede">
+            From governance and compliance to architecture, testing, and managed services — we deliver
+            the strategy and execution needed to protect critical assets and accelerate performance.
+          </p>
+          <div class="slide__actions">
+            <a href="/cybersecurity" class="btn btn--primary"><span>Explore cybersecurity</span></a>
+            <a href="/contact" class="btn btn--ghost">Request an assessment →</a>
+          </div>
+        </article>
+
+        <article class="slide" data-slide="2" aria-roledescription="slide" aria-label="3 of 3" hidden>
+          <span class="slide__eyebrow"><span class="slide__dot"></span> Transform</span>
+          <h1 class="slide__title">
+            Adopt AI <span class="grad">securely</span>, modernize with <span class="grad">confidence</span>.
+          </h1>
+          <p class="slide__lede">
+            Practical, governed AI and modernization that unlocks new value while keeping your data,
+            models, and customers protected by design.
+          </p>
+          <div class="slide__actions">
+            <a href="/ai-services" class="btn btn--primary"><span>See AI services</span></a>
+            <a href="/contact" class="btn btn--ghost">Start your roadmap →</a>
+          </div>
+        </article>
+
+        <div class="slider__controls" role="tablist" aria-label="Slide controls">
+          <button class="slider__dot slider__dot--active" data-go="0" role="tab" aria-label="Slide 1" aria-selected="true"></button>
+          <button class="slider__dot" data-go="1" role="tab" aria-label="Slide 2" aria-selected="false"></button>
+          <button class="slider__dot" data-go="2" role="tab" aria-label="Slide 3" aria-selected="false"></button>
+        </div>
+      </div>
+
+      <aside class="hero__card" aria-label="At a glance">
+        <div class="hero__cardHeader">
+          <div class="hero__cardBadge">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Zm-1 14-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 7Z"/></svg>
+          </div>
+          <div>
+            <p class="hero__cardKicker">At a glance</p>
+            <h3 class="hero__cardTitle">End-to-end coverage</h3>
+          </div>
+        </div>
+        <ul class="hero__cardList">
+          <li><strong>Cybersecurity</strong><span>Governance · Testing · Architecture</span></li>
+          <li><strong>Applications</strong><span>BI · Integration · Managed Services</span></li>
+          <li><strong>Artificial Intelligence</strong><span>Secure adoption · AI governance</span></li>
+          <li><strong>Compliance</strong><span>NCA · SAMA · PDPL · ISO 27001 · NIST</span></li>
+        </ul>
+        <a href="/cybersecurity" class="hero__cardLink">See all capabilities <span aria-hidden="true">→</span></a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ========== INTRO ========== -->
+  <section class="intro" aria-label="Introduction">
+    <div class="container intro__inner">
+      <p>
+        In today's fast-changing threat and technology landscape, organizations need more than point solutions.
+        They need a trusted partner that understands risk, compliance, operations, and innovation. At CyberNovate,
+        we bring these capabilities together to help clients innovate securely and transform with confidence.
+      </p>
+      <p>
+        Our team provides end-to-end IT and cybersecurity services designed to help businesses reduce risk,
+        improve resilience, meet regulatory requirements, modernize technology environments, and unlock new
+        value through data and AI.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== FRAMEWORKS STRIP ========== -->
+  <section class="strip" aria-label="Frameworks and standards">
+    <div class="container">
+      <p class="strip__label">Aligned with leading frameworks &amp; regulations</p>
+      <div class="strip__items">
+        <span class="strip__item">ISO 27001</span>
+        <span class="strip__item">NIST CSF</span>
+        <span class="strip__item">NCA ECC</span>
+        <span class="strip__item">SAMA CSF</span>
+        <span class="strip__item">PDPL</span>
+        <span class="strip__item">Zero Trust</span>
+        <span class="strip__item">CIS Controls</span>
+        <span class="strip__item">MITRE ATT&amp;CK</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY CHOOSE US ========== -->
+  <section class="why" aria-labelledby="whyTitle">
+    <div class="container">
+      <header class="section-head section-head--center">
+        <span class="eyebrow">Why CyberNovate</span>
+        <h2 id="whyTitle" class="section-title">Why CyberNovate?</h2>
+      </header>
+      <div class="why__grid">
+        <article class="why__card reveal">
+          <div class="why__icon why__icon--1">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/></svg>
+          </div>
+          <h3>Deep expertise across cybersecurity, applications, and AI</h3>
+          <p>Specialists working under one roof and one engagement model — covering every dimension of your digital security needs.</p>
+        </article>
+        <article class="why__card reveal">
+          <div class="why__icon why__icon--2">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 13h2v-2H3v2Zm4 4h2v-2H7v2Zm4-12h2V3h-2v2Zm0 16h2v-2h-2v2Zm-4-4h2v-2H7v2Zm-4-4h2V9H3v2Zm14 0h2V9h-2v2Zm0 4h2v-2h-2v2Zm0-8h2V5h-2v2Zm-4 14h2v-2h-2v2Zm-4-16h2V3H9v2ZM12 9a3 3 0 1 0 .001 6.001A3 3 0 0 0 12 9Z"/></svg>
+          </div>
+          <h3>Business-driven approach aligned to your operational goals</h3>
+          <p>Security and modernization investments designed to deliver measurable value that aligns with how your business operates.</p>
+        </article>
+        <article class="why__card reveal">
+          <div class="why__icon why__icon--3">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17Z"/></svg>
+          </div>
+          <h3>Strong understanding of regulatory and compliance requirements</h3>
+          <p>Deep fluency in NCA, SAMA, PDPL, NIST, ISO 27001, and other obligations — with audit-ready output and clear accountability.</p>
+        </article>
+        <article class="why__card reveal">
+          <div class="why__icon why__icon--4">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 3h8v8H3V3Zm10 0h8v8h-8V3ZM3 13h8v8H3v-8Zm10 4 4-4 4 4-4 4-4-4Z"/></svg>
+          </div>
+          <h3>Practical, scalable solutions for enterprise and mid-market organizations</h3>
+          <p>Right-sized engagements that work for your scale — without the overhead or complexity of one-size-fits-all approaches.</p>
+        </article>
+        <article class="why__card reveal">
+          <div class="why__icon why__icon--5">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5Z"/></svg>
+          </div>
+          <h3>Flexible delivery models including advisory, project-based, and managed services</h3>
+          <p>Choose the engagement model that fits your current needs — then scale up or shift as your priorities evolve.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CORE SERVICES ========== -->
+  <section class="services" aria-labelledby="servicesTitle">
+    <div class="container">
+      <header class="section-head section-head--center">
+        <span class="eyebrow">What we do</span>
+        <h2 id="servicesTitle" class="section-title">Three pillars. One trusted partner.</h2>
+        <p class="section-lede">
+          We combine business understanding with technical execution to help you reduce risk, modernize
+          operations, and unlock value through data and AI.
+        </p>
+      </header>
+      <div class="services__grid">
+        <ServiceCard
+          num="01"
+          title="Cybersecurity"
+          description="Protect your organization with comprehensive cybersecurity services covering governance, compliance, risk, assessments, architecture, consulting, and transformation."
+          bullets={[
+            'Governance, Risk & Compliance',
+            'Security Testing & Assessment',
+            'Security Architecture & Design',
+            'Strategy & Transformation',
+          ]}
+          ctaText="Explore cybersecurity"
+          href="/cybersecurity"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Zm-1 14-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 7Z"/></svg>
+        </ServiceCard>
+
+        <ServiceCard
+          num="02"
+          title="Application Services"
+          description="Improve efficiency and innovation through business intelligence, system integration, technology consulting, IT managed services, and AI-enabled solutions."
+          bullets={[
+            'Business Intelligence',
+            'System Integration',
+            'Technology Consulting',
+            'IT Managed Services',
+          ]}
+          ctaText="Explore applications"
+          href="/applications"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M3 4h18v2H3V4Zm2 4h14v12H5V8Zm3 3v2h8v-2H8Zm0 4v2h6v-2H8Z"/></svg>
+        </ServiceCard>
+
+        <ServiceCard
+          num="03"
+          title="Artificial Intelligence"
+          description="Adopt AI securely and strategically with solutions focused on cybersecurity risk assessment, AI governance, and AI cybersecurity frameworks."
+          bullets={[
+            'Cybersecurity for AI Solutions',
+            'AI Cybersecurity Framework',
+            'Secure AI Adoption Strategy',
+            'AI Risk & Control Models',
+          ]}
+          ctaText="Explore AI services"
+          href="/ai-services"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v1H6a3 3 0 0 0 0 6h1v1a5 5 0 0 0 10 0v-1h1a3 3 0 0 0 0-6h-1V7a5 5 0 0 0-5-5Zm-2 8h4v4h-4v-4Z"/></svg>
+        </ServiceCard>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS ========== -->
+  <section class="stats" aria-label="Capabilities at a glance">
+    <div class="container stats__inner">
+      <div class="stat reveal">
+        <div class="stat__num"><span data-count="3">0</span></div>
+        <div class="stat__label">Service pillars</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num"><span data-count="6">0</span></div>
+        <div class="stat__label">Cybersecurity domains</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num"><span data-count="5">0</span></div>
+        <div class="stat__label">Application services</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num"><span data-count="100">0</span><span class="stat__plus">%</span></div>
+        <div class="stat__label">Business-aligned delivery</div>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>

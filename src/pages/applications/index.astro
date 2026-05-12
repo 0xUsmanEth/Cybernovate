@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+<BaseLayout
+  title="Application Services | CyberNovate"
+  description="Modernize systems, integrate platforms, and unlock value through Business Intelligence, System Integration, Technology Consulting, and IT Managed Services."
+>
+
+  <PageHero eyebrow="Application Services" title="Application Services">
+    <Fragment slot="subtitle">
+      <p>Technology should enable better decisions, smoother operations, and stronger business outcomes. Our application services help organizations modernize systems, integrate platforms, improve visibility, and adopt innovative technologies that support performance and growth.</p>
+      <p>We combine business understanding with technical expertise to deliver practical solutions that improve efficiency, scalability, and digital agility.</p>
+    </Fragment>
+  </PageHero>
+
+  <section class="services" aria-labelledby="appServicesTitle">
+    <div class="container">
+      <h2 id="appServicesTitle" class="section-title" style="margin-bottom: 36px;">Our Application Services</h2>
+      <div class="services__grid">
+
+        <ServiceCard
+          num="01"
+          title="Business Intelligence"
+          description="Transform data into actionable insight with BI strategy, dashboard development, and data visualization services."
+          bullets={['BI Strategy & Reporting Frameworks','Dashboard & Analytics Development','Data Visualization & KPI Monitoring','Data Integration for Reporting']}
+          ctaText="Explore BI"
+          href="/applications/business-intelligence"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M3 17h4v-7H3v7Zm7 0h4V3h-4v14Zm7 0h4V8h-4v9Z"/></svg>
+        </ServiceCard>
+
+        <ServiceCard
+          num="02"
+          title="System Integration"
+          description="Connect applications, platforms, and data flows with enterprise integration, API solutions, and workflow automation."
+          bullets={['Enterprise Application Integration','API & Middleware Solutions','Process & Workflow Automation','Legacy and Modern Connectivity']}
+          ctaText="Explore Integration"
+          href="/applications/system-integration"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M4 6h16v2H4V6Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z"/></svg>
+        </ServiceCard>
+
+        <ServiceCard
+          num="03"
+          title="Technology Consulting"
+          description="Independent IT strategy, architecture planning, and digital transformation consulting to guide your technology investments."
+          bullets={['IT Strategy & Advisory','Architecture & Solution Planning','Technology Assessments','Digital Transformation Consulting']}
+          ctaText="Explore Consulting"
+          href="/applications/technology-consulting"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="currentColor" d="M11 7h2v6h-2zM11 14h2v2h-2z"/></svg>
+        </ServiceCard>
+
+        <ServiceCard
+          num="04"
+          title="IT Managed Services"
+          description="Stable, secure IT operations through ongoing support, infrastructure monitoring, and incident response management."
+          bullets={['Ongoing IT Support & Operations','Infrastructure & System Monitoring','Incident & Issue Response','Service Optimization & Maintenance']}
+          ctaText="Explore Managed Services"
+          href="/applications/it-managed-services"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2 2 7l10 5 10-5-10-5Zm0 11L2 8v9l10 5 10-5V8l-10 5Z"/></svg>
+        </ServiceCard>
+
+        <ServiceCard
+          num="05"
+          title="Artificial Intelligence for Business"
+          description="Integrate practical AI into your business workflows with use case identification, intelligent automation, and AI-enabled analytics."
+          bullets={['AI Use Case Identification','Intelligent Automation Solutions','AI-enabled Analytics','Process Optimization with ML']}
+          ctaText="Explore AI for Business"
+          href="/applications/ai-for-business"
+        >
+          <svg slot="icon" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v1H6a3 3 0 0 0 0 6h1v1a5 5 0 0 0 10 0v-1h1a3 3 0 0 0 0-6h-1V7a5 5 0 0 0-5-5Z"/></svg>
+        </ServiceCard>
+
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+
+</BaseLayout>
