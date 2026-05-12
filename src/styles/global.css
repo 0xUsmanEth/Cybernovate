@@ -791,32 +791,49 @@ p { margin: 0 0 1em; }
    Page hero (inner pages)
    ============================================================ */
 .page-hero {
-  background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 60%, var(--navy-700) 100%);
-  padding: clamp(80px, 10vw, 130px) 0 clamp(60px, 8vw, 100px);
-  color: white;
+  background:
+    radial-gradient(ellipse at 80% 0%, var(--blue-50) 0%, transparent 55%),
+    linear-gradient(180deg, #fbfdff 0%, white 70%);
+  padding: clamp(60px, 8vw, 100px) 0 clamp(50px, 7vw, 80px);
   position: relative;
   overflow: hidden;
 }
 .page-hero::before {
   content: '';
   position: absolute; inset: 0;
-  background-image: radial-gradient(circle, rgba(255,255,255,.07) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse at 50% 30%, black 30%, transparent 75%);
+  opacity: .35;
+  pointer-events: none;
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, var(--blue-300), transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .4;
+  top: -120px; right: -100px;
   pointer-events: none;
 }
 .page-hero__inner { position: relative; }
-.page-hero .eyebrow { color: var(--blue-300); }
-.page-hero .eyebrow::before { background: linear-gradient(90deg, var(--blue-300), white); }
+.page-hero .eyebrow { color: var(--blue-500); }
+.page-hero .eyebrow::before { background: linear-gradient(90deg, var(--blue-500), var(--blue-400)); }
 .page-hero__title {
   font-size: clamp(32px, 5vw, 58px);
   font-weight: 700;
-  color: white;
+  color: var(--navy-900);
   max-width: 900px;
   margin: 0 0 20px;
 }
 .page-hero__subtitle {
   font-size: clamp(15px, 1.4vw, 17px);
-  color: rgba(255,255,255,.78);
+  color: var(--ink-600);
   max-width: 760px;
   line-height: 1.7;
 }
@@ -830,13 +847,13 @@ p { margin: 0 0 1em; }
   gap: 8px;
   margin-bottom: 24px;
   font-size: 13px;
-  color: rgba(255,255,255,.55);
+  color: var(--ink-500);
   flex-wrap: wrap;
 }
-.breadcrumb a { color: rgba(255,255,255,.55); transition: color .2s; }
-.breadcrumb a:hover { color: white; }
-.breadcrumb__sep { color: rgba(255,255,255,.3); font-size: 12px; }
-.breadcrumb__current { color: rgba(255,255,255,.85); }
+.breadcrumb a { color: var(--ink-500); transition: color .2s; }
+.breadcrumb a:hover { color: var(--blue-500); }
+.breadcrumb__sep { color: var(--line-2); font-size: 12px; }
+.breadcrumb__current { color: var(--navy-900); font-weight: 500; }
 
 /* ============================================================
    Value strip (dark navy + checkmarks)
