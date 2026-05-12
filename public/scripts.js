@@ -46,6 +46,28 @@
       hamburger.classList.contains('is-open') ? close() : open()
     );
     $$('a', mobileNav).forEach(a => a.addEventListener('click', close));
+
+    /* Accordion toggles inside mobile nav */
+    $$('.mobile-nav__toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const group = btn.closest('.mobile-nav__group');
+        const isOpen = group.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', String(isOpen));
+        const sub = document.getElementById(btn.getAttribute('aria-controls'));
+        if (sub) sub.hidden = !isOpen;
+        if (isOpen) {
+          $$('.mobile-nav__group').forEach(g => {
+            if (g === group) return;
+            g.classList.remove('is-open');
+            const otherBtn = $('.mobile-nav__toggle', g);
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+            const otherId = otherBtn && otherBtn.getAttribute('aria-controls');
+            const otherSub = otherId && document.getElementById(otherId);
+            if (otherSub) otherSub.hidden = true;
+          });
+        }
+      });
+    });
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && hamburger.classList.contains('is-open')) close();
     });

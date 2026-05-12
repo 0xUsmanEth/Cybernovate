@@ -64,37 +64,64 @@ const active = (path: string) => {
       <span></span><span></span><span></span>
     </button>
   </div>
-
-  <!-- Mobile drawer -->
-  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
-    <a href="/">Home</a>
-
-    <p class="mobile-nav__section">Cybersecurity</p>
-    <a href="/cybersecurity">All Cybersecurity Services</a>
-    <a href="/cybersecurity/governance-risk-compliance" class="sub">Governance, Risk &amp; Compliance</a>
-    <a href="/cybersecurity/consulting" class="sub">Cybersecurity Consulting</a>
-    <a href="/cybersecurity/third-party-security" class="sub">Third-party Security</a>
-    <a href="/cybersecurity/security-testing" class="sub">Security Testing &amp; Assessment</a>
-    <a href="/cybersecurity/security-architecture" class="sub">Security Architecture &amp; Design</a>
-    <a href="/cybersecurity/strategy-transformation" class="sub">Strategy &amp; Transformation</a>
-
-    <p class="mobile-nav__section">Applications</p>
-    <a href="/applications">All Application Services</a>
-    <a href="/applications/business-intelligence" class="sub">Business Intelligence</a>
-    <a href="/applications/system-integration" class="sub">System Integration</a>
-    <a href="/applications/technology-consulting" class="sub">Technology Consulting</a>
-    <a href="/applications/it-managed-services" class="sub">IT Managed Services</a>
-    <a href="/applications/ai-for-business" class="sub">AI for Business</a>
-
-    <p class="mobile-nav__section">AI Services</p>
-    <a href="/ai-services">All AI Services</a>
-    <a href="/ai-services/cybersecurity-for-ai" class="sub">Cybersecurity for AI</a>
-    <a href="/ai-services/ai-cybersecurity-framework" class="sub">AI Cybersecurity Framework</a>
-
-    <p class="mobile-nav__section">Company</p>
-    <a href="/about">About</a>
-    <a href="/contact">Contact</a>
-
-    <a href="/contact" class="btn btn--primary mobile-nav__cta"><span>Get a Quote</span></a>
-  </div>
 </header>
+
+<!-- Mobile drawer — outside header to prevent scroll-width bleed -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+  <ul class="mobile-nav__list">
+    <li><a href="/">Home</a></li>
+
+    <li class="mobile-nav__group">
+      <button class="mobile-nav__toggle" aria-expanded="false" aria-controls="mnCybersecurity">
+        Cybersecurity
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 10.5 3 5.5h10z"/></svg>
+      </button>
+      <ul id="mnCybersecurity" class="mobile-nav__sub" hidden>
+        <li><a href="/cybersecurity">All Cybersecurity Services</a></li>
+        <li><a href="/cybersecurity/governance-risk-compliance" class="sub">Governance, Risk &amp; Compliance</a></li>
+        <li><a href="/cybersecurity/consulting" class="sub">Cybersecurity Consulting</a></li>
+        <li><a href="/cybersecurity/third-party-security" class="sub">Third-party Security</a></li>
+        <li><a href="/cybersecurity/security-testing" class="sub">Security Testing &amp; Assessment</a></li>
+        <li><a href="/cybersecurity/security-architecture" class="sub">Security Architecture &amp; Design</a></li>
+        <li><a href="/cybersecurity/strategy-transformation" class="sub">Strategy &amp; Transformation</a></li>
+      </ul>
+    </li>
+
+    <li class="mobile-nav__group">
+      <button class="mobile-nav__toggle" aria-expanded="false" aria-controls="mnApplications">
+        Applications
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 10.5 3 5.5h10z"/></svg>
+      </button>
+      <ul id="mnApplications" class="mobile-nav__sub" hidden>
+        <li><a href="/applications">All Application Services</a></li>
+        <li><a href="/applications/business-intelligence" class="sub">Business Intelligence</a></li>
+        <li><a href="/applications/system-integration" class="sub">System Integration</a></li>
+        <li><a href="/applications/technology-consulting" class="sub">Technology Consulting</a></li>
+        <li><a href="/applications/it-managed-services" class="sub">IT Managed Services</a></li>
+        <li><a href="/applications/ai-for-business" class="sub">AI for Business</a></li>
+      </ul>
+    </li>
+
+    <li class="mobile-nav__group">
+      <button class="mobile-nav__toggle" aria-expanded="false" aria-controls="mnAiServices">
+        AI Services
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 10.5 3 5.5h10z"/></svg>
+      </button>
+      <ul id="mnAiServices" class="mobile-nav__sub" hidden>
+        <li><a href="/ai-services">All AI Services</a></li>
+        <li><a href="/ai-services/cybersecurity-for-ai" class="sub">Cybersecurity for AI</a></li>
+        <li><a href="/ai-services/ai-cybersecurity-framework" class="sub">AI Cybersecurity Framework</a></li>
+      </ul>
+    </li>
+
+    <li class="mobile-nav__group">
+      <p class="mobile-nav__section">Company</p>
+      <ul class="mobile-nav__sub" style="display:block">
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <a href="/contact" class="btn btn--primary mobile-nav__cta"><span>Get a Quote</span></a>
+</nav>
