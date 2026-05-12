@@ -836,7 +836,12 @@ p { margin: 0 0 1em; }
 .page-hero__title {
   font-size: clamp(32px, 5vw, 58px);
   font-weight: 700;
-  color: var(--navy-900);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  background: linear-gradient(120deg, var(--ink-900) 20%, var(--navy-700) 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   max-width: 900px;
   margin: 0 0 20px;
 }
